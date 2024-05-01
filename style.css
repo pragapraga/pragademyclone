@@ -14,6 +14,25 @@ body {
     align-items: center;
     border-bottom: solid 1px black;
     gap: 20px;
+    background-color: azure;
+    position: sticky;
+    top: 0px;
+}
+
+.my-learning:hover .my-learning__message{
+    display: block;
+}
+.my-learning{
+    position: relative;
+}
+.my-learning__message {
+    border: 1px solid black;
+    background-color: white;
+    position:absolute;
+    display: none;
+    width: 120px;
+    padding: 5px;
+    top: 120%;
 }
 
 .navbar__section1__title {
@@ -34,6 +53,7 @@ body {
     border: none;
     width: 100%;
     font-size: 16px;
+    background-color: transparent;
 }
 
 #search:focus {
@@ -64,9 +84,22 @@ body {
 
 .sales-image img {
     width: 100%;
+    z-index: 1;
+    position: relative;
 }
 
-.recommended_container, .popular__container {
+
+div.sales-banner {
+    z-index: 2;
+    height: 200px;
+    width: 500px;
+    position: absolute;
+    top: 300px;
+    left: 150px;
+}
+
+.recommended_container,
+.popular__container {
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -80,19 +113,23 @@ body {
 .course-card img {
     width: 100%;
 }
-.price{
+
+.price {
     display: flex;
     gap: 10px;
 }
-.course-card h3{
+
+.course-card h3 {
     word-wrap: break-word;
 }
 
-.topics, .popular, .recommended {
+.topics,
+.popular,
+.recommended {
     margin: 20px;
 }
 
-.topics_container{
+.topics_container {
     display: flex;
     flex-wrap: wrap;
 }
@@ -107,28 +144,33 @@ body {
     flex-grow: 1;
 }
 
-.footer{
+.footer {
     background-color: black;
     width: 100%;
     color: white;
 }
-.footer__one{
+
+.footer__one {
     display: flex;
 }
 
-.footer_one__section1 p, .footer_one__section2 p{
+.footer_one__section1 p,
+.footer_one__section2 p {
     padding: 10px;
 }
-.footer_one__section1,.footer_one__section2{
+
+.footer_one__section1,
+.footer_one__section2 {
     margin: 25px;
 }
 
-.footer_two{
+.footer_two {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.footer_two h1, .footer_two p{
+.footer_two h1,
+.footer_two p {
     margin: 20px;
 }
